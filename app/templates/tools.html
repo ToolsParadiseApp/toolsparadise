@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Tools - ToolsParadise{% endblock %}
+{% block content %}
+<h2>Available Tools</h2>
+<ul>
+    {% for tool in tools %}
+    <li><strong>{{ tool.name }}</strong>: {{ tool.description }}</li>
+    {% endfor %}
+</ul>
+<form method="post" action="/tools">
+    <input type="text" name="name" placeholder="Tool Name" required>
+    <input type="text" name="description" placeholder="Description" required>
+    <button type="submit">Add Tool</button>
+</form>
+{% endblock %}
