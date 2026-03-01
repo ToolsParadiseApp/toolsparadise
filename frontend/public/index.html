@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tools Paradise - Your collection of useful tools">
+    <title>Tools Paradise</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+</head>
+<body>
+    <div id="root"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 id="app-title">Tools Paradise</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section id="home" class="hero">
+            <h2>Welcome to Tools Paradise</h2>
+            <p>Discover and manage your favorite tools</p>
+        </section>
+        
+        <section id="tools" class="tools-section">
+            <h2>Available Tools</h2>
+            <div id="tools-list" class="tools-grid"></div>
+        </section>
+        
+        <section id="add-tool" class="add-tool-section">
+            <h2>Add New Tool</h2>
+            <form id="add-tool-form">
+                <input type="text" id="tool-name" placeholder="Tool name" required>
+                <textarea id="tool-desc" placeholder="Description"></textarea>
+                <input type="url" id="tool-url" placeholder="URL">
+                <select id="tool-category">
+                    <option value="">Select category</option>
+                    <option value="Development">Development</option>
+                    <option value="Design">Design</option>
+                    <option value="Productivity">Productivity</option>
+                </select>
+                <button type="submit">Add Tool</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Tools Paradise. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
