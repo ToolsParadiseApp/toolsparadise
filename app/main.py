@@ -1,6 +1,13 @@
+
+import os
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = FastAPI()
 

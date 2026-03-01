@@ -8,6 +8,18 @@ A FastAPI-based web application for managing and showcasing useful tools.
 - SQLite database with SQLAlchemy ORM
 - Dockerized for easy deployment
 
+
+## Environment Variables
+
+This project uses a `.env` file to manage environment variables (such as database URL, secret keys, etc). Copy `.env.example` to `.env` and edit as needed:
+
+```bash
+cp .env.example .env
+# Then edit .env to set your values
+```
+
+The app will automatically load variables from `.env` at startup.
+
 ## Getting Started
 
 ### Local Development
@@ -23,15 +35,21 @@ A FastAPI-based web application for managing and showcasing useful tools.
 ### With Docker
 1. Build and run with Docker Compose:
    ```bash
-   docker-compose up --build
+1. Install dependencies (after activating the venv):
+   ```bash
+   pip install -r requirements.txt
    ```
-
-2. Access the app at [http://localhost:8000](http://localhost:8000)
-
-## Project Structure
-- `app/` - Application code
-  - `main.py` - FastAPI entry point
+2. Run the app:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
   - `routes.py` - API routes
+## Python Virtual Environment
+This project uses a Python virtual environment for dependency management. To activate it:
+
+```bash
+source .venv/bin/activate
+```
   - `models.py` - SQLAlchemy models
   - `schemas.py` - Pydantic schemas
   - `database.py` - Database connection
